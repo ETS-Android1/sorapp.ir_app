@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ac_post"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ac_post_main_context"
+        android:visibility="gone">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:collapsedTitleGravity="top"
+                app:layout_anchorGravity="top"
+                app:layout_insetEdge="top"
+                android:background="@android:color/white"
+                android:elevation="5dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/logo"
+                        android:layout_margin="12dp"/>
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ac_post_web_View"
+                android:layout_marginTop="?actionBarSize">
+
+            </WebView>
+
+    </RelativeLayout>
+
+
+
+    <!--Wait Layout Start-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ac_post_in_wait_layout"
+        android:layout_centerInParent="true">
+
+        <include layout="@layout/layout_loading"/>
+
+    </RelativeLayout>
+    <!--Wait Layout End-->
+
+
+
+</RelativeLayout>

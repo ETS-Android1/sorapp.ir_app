@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Sorapp</string>
+    <string name="email_address">آدرس ایمیل</string>
+    <string name="phone_number">شماره موبایل</string>
+    <string name="name_and_family">نام و نام خانوادگی</string>
+    <string name="nikname">نام کاربری</string>
+    <string name="done">تایید</string>
+    <string name="Login">ورود</string>
+    <string name="Signin">ثبت نام</string>
+    <string name="Enter_Data">ورود اطلاعات</string>
+    <string name="no_internet_conntion">از اتصال خود به اینترنت اطمینان حاصل کنید سپس رو دکمه تلاش مجدد کلیک کنید</string>
+    <string name="try_agin">تلاش دوباره</string>
+    <string name="Verify_Code_Sended_To_Your_Email">کد فعال سازی به ایمیل شما ارسال شد پس از دریافت کد را در کادر زیر وارد کنید</string>
+    <string name="Verfy_Code">کد فعال سازی</string>
+    <string name="Please_Fill_All_Edittexts">لطفا همه کادر ها را پر کنید</string>
+    <string name="Iran_Code">98+</string>
+    <string name="user_exist">کاربر موجود</string>
+    <string name="User_Exist">ایمیل یا نام کاربری و یا شماره موبایل وارده شده قبلا رزرو شده است</string>
+    <string name="user_Not_exist">کاربر موجود نمی باشد</string>
+    <string name="User_Not_Exist">هیچ کاربری با اطلاعات وارد شده موجود نمی باشد و یا مسدود شده است</string>
+    <string name="Understand">متوجه شدم</string>
+    <string name="Wait_Please">لطفا چند لحظه صبر کیند</string>
+    <string name="Code_Is_False">کد وارد شده صحیح نمی باشد</string>
+    <string name="email_or_name_and_family_or_phone_username">نام و نام خانوادگی یا ایمیل یا شماره موبایل یا نام کاربری را وارد کنید</string>
+    <string name="your_account_is_not_Regestered">حساب کاربری شما به درستی فعال نشد لطفا دوباره تلاش کنید</string>
+    <string name="user_not_found">کاربر مورد نظر یافت نشد</string>
+    <string name="most_update">شما باید نرم افزار را به روزرسانی کنید</string>
+    <string name="update_now">همین حالا به روز رسانی کن</string>
+    <string name="Your_Account_Is_Limted">حساب کاربری شما غیر فعال شده است لطفا دوباره ثبت نام کنید</string>
+    <string name="Your_Account_Is_Limted_Of_Server">حساب کاربری شما از طرف سرور تا اطلاع ثاتوی بسته است</string>
+    <string name="Server_Is_Fixing_Now">سرور در دست تعمیر است لطفا بعدا مراجعه کنید</string>
+
+    <string name="Home">خانه</string>
+    <string name="Categorys">دسته بندی ها</string>
+    <string name="Profile">پروفایل</string>
+    <string name="Edit_Profile">ویرایش اطلاعات</string>
+    <string name="Exit_Of_Account">خارج شدن</string>
+    <string name="Share_APP_LINK">ارسال برنامه</string>
+    <string name="Search">جست و جو</string>
+    <string name="Plase_3_Char">لطفا حداقل 3 کلمه وارد کنید</string>
+    <string name="Not_Founded_Item">آیتم مورد نظر یافت نشد</string>
+
+    <string name="SMS_MESSAGE">کد تایید نرم افزار سوراپ شما : </string>
+    <string name="Version">نسخه نرم افزار</string>
+    <string name="profile_description">تبریک شما در حال حاظر در حال استفاده از نسخه اروجینال اپلیکیشن وب سایت سوراپ می باشید و نسخه نصبی شما به روز ترین نسخه موجود در حال حاضر نرم افزار می باشد </string>
+
+
+
+</resources>

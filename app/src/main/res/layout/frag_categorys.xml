@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frag_categorys"
+    android:background="@android:color/white">
+
+
+    <!--Header Start-->
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:collapsedTitleGravity="top"
+        app:layout_anchorGravity="top"
+        app:layout_insetEdge="top"
+        android:background="@android:color/white"
+        android:elevation="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo"
+                android:layout_margin="12dp"/>
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+    <!--Header End-->
+
+
+    <!--Main Content Start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
+        
+        
+        <!--Main Context Start-->
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frag_categorys_grid_view"
+            android:visibility="gone"/>
+        <!--Main Context End-->
+
+    </RelativeLayout>
+    <!--Main Content Start-->
+
+
+
+
+    <!--Wait Layout Start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frag_categorys_wait"
+        android:layout_marginTop="?actionBarSize">
+
+        <include layout="@layout/layout_loading"/>
+
+    </RelativeLayout>
+    <!--Wait Layout End-->
+
+
+
+
+
+</RelativeLayout>

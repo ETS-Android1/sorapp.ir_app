@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ac_limit_user"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/img_limit"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ac_limit_user_imageview"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ac_limit_user_imageview"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Your_Account_Is_Limted"
+            android:textAlignment="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#222222"
+            android:textSize="16dp"
+            android:id="@+id/ac_limit_user_textview"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ac_limit_user_textview"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/style_sign_in_button"
+            android:text="@string/Signin"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:layout_marginTop="15dp"
+            android:onClick="ac_limit_user_onclick_sign_button"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

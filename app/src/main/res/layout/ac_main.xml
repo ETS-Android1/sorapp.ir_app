@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ac_main"
+    android:background="@android:color/white">
+
+
+
+
+    <!--Get All Fragment Panels Start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ac_main_main_panel"
+        android:layout_marginBottom="?actionBarSize">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ac_main_home_frag_panel">
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ac_main_home_frag"
+                android:name="ir.soapp.turk.frag_home"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/ac_main_categry_frag_panel">
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ac_main_category_frag"
+                android:name="ir.soapp.turk.frag_categorys"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/ac_main_profile_frag_panel">
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ac_main_profile_frag"
+                android:name="ir.soapp.turk.frag_profile"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <!--Get All Fragment Panels End-->
+
+
+
+
+
+    <!--Bottom Navigation View Start-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:id="@+id/ac_main_menu"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:onClick="ac_main_on_click_navigation_view_menu"
+            android:id="@+id/ac_main_menu_home_item"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_home_select"
+                android:layout_weight="0.85"
+                android:id="@+id/ac_main_menu_home_item_image"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Home"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#222"
+                    android:textSize="12dp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:onClick="ac_main_on_click_navigation_view_menu"
+            android:id="@+id/ac_main_menu_category_item"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_view_list_not_select"
+                android:layout_weight="0.85"
+                android:id="@+id/ac_main_menu_category_item_image"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Categorys"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#222"
+                    android:textSize="12dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:onClick="ac_main_on_click_navigation_view_menu"
+            android:id="@+id/ac_main_menu_profile_item"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_account_circle_not_select"
+                android:layout_weight="0.85"
+                android:id="@+id/ac_main_menu_profile_item_image"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Profile"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#222"
+                    android:textSize="12dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--Bottom Navigation View End-->
+
+
+
+
+
+</RelativeLayout>

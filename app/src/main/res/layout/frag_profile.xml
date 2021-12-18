@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frag_profile"
+    android:background="@android:color/white">
+
+
+
+    <!--Header Start-->
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:collapsedTitleGravity="top"
+        app:layout_anchorGravity="top"
+        app:layout_insetEdge="top"
+        android:background="@android:color/white"
+        android:elevation="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="ltr">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo"
+                android:layout_margin="12dp"
+                android:id="@+id/frag_home_header_logo"/>
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+    <!--Header End-->
+
+
+    <!--Wait Layout Start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frag_profile_in_wait_layout"
+        android:visibility="gone"
+        android:layout_marginTop="?actionBarSize">
+
+        <include layout="@layout/layout_loading"/>
+
+
+    </RelativeLayout>
+    <!--Wait Layout End-->
+
+
+    <!--Main Context Start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frag_profile_main_content">
+
+        <!--Main Content Start-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--Header Start-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/frag_profile_header"
+                    android:background="@drawable/style_profile1"
+                    android:layout_marginTop="?actionBarSize">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:id="@+id/frag_profile_Header_Internal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Profile"
+                            android:layout_centerInParent="true"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:foreground="@drawable/style_rounded_image_view"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_account_circle_not_select"
+                        android:id="@+id/frag_profile_user_image_view"
+                        android:scaleType="centerCrop"
+                        android:layout_below="@id/frag_profile_Header_Internal"
+                        android:padding="25dp" />
+
+
+                    <!--Version Start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:id="@+id/frag_profile_header_user_version_layout"
+                        android:layout_below="@id/frag_profile_user_image_view"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:id="@+id/frag_profile_version_textview"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/bk"
+                                android:textSize="10dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <!--Version End-->
+
+
+
+
+                    <!--Items Start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/frag_profile_header_user_version_layout"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/style_profile_items_background"
+                        android:elevation="2dp"
+                        android:padding="5dp">
+
+
+                        <!--Edit Profile Button Start-->
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/style_profile_items"
+                            android:text="@string/Edit_Profile"
+                            android:textSize="12dp"
+                            android:id="@+id/frag_profile_edit_button"
+                            android:fontFamily="@font/bk"
+                            android:textColor="#666666"/>
+                        <!--Edit Profile Button End-->
+
+
+                        <!--SHARE APP Button Start-->
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/style_profile_items"
+                            android:text="@string/Share_APP_LINK"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/bk"
+                            android:textColor="#666666"
+                            android:onClick="frag_profile_onclick_share_app_link_btn"/>
+                        <!--SHARE APP Button End-->
+
+
+                        <!--EXIT ACCOUNT Button Start-->
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/style_profile_items"
+                            android:text="@string/Exit_Of_Account"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/bk"
+                            android:textColor="#666666"
+                            android:onClick="frag_profile_onclick_exit_of_account_btn"/>
+                        <!--EXIT ACCOUNT Button End-->
+
+                    </LinearLayout>
+                    <!--Items End-->
+                    
+
+                </RelativeLayout>
+                <!--Header End-->
+
+
+                <!--Content Start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/frag_profile_header"
+                    android:background="@drawable/style_profile_items_background"
+                    android:padding="14dp"
+                    android:elevation="2dp"
+                    android:id="@+id/frag_profile_middle_content_layout">
+
+
+
+                    <!--Name And Family Start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:id="@+id/frag_profile_header_user_name_and_family_layout"
+                        android:layout_below="@id/frag_profile_user_image_view"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/name_and_family"
+                            android:textDirection="rtl"
+                            android:textColor="#666666"
+                            android:fontFamily="@font/bk"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:id="@+id/frag_profile_name_and_family_textview"
+                            android:textColor="#666666"
+                            android:fontFamily="@font/bk"
+                            android:textAlignment="center"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                    <!--Name And Family End-->
+
+
+                    <!--Username Start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/nikname"
+                            android:textDirection="rtl"
+                            android:textColor="#666666"
+                            android:fontFamily="@font/bk"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:id="@+id/frag_profile_username_textview"
+                            android:textColor="#666666"
+                            android:fontFamily="@font/bk"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                    <!--Username End-->
+
+                    <!--Email Start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/email_address"
+                            android:textDirection="rtl"
+                            android:textColor="#666666"
+                            android:fontFamily="@font/bk"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:id="@+id/frag_profile_email_textview"
+                            android:textColor="#666666"
+                            android:fontFamily="@font/bk"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                    <!--Email End-->
+
+                    <!--Phone Start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/phone_number"
+                            android:textDirection="rtl"
+                            android:textColor="#666666"
+                            android:fontFamily="@font/bk"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:id="@+id/frag_profile_phone_textview"
+                            android:textColor="#666666"
+                            android:fontFamily="@font/bk"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                    <!--Phone End-->
+
+
+                </LinearLayout>
+                <!--Content End-->
+
+
+
+                <!--Bottom Layout Start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/frag_profile_middle_content_layout"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="2dp"
+                    android:padding="10dp"
+                    android:background="@drawable/style_profile_items_background"
+                    android:layoutDirection="rtl">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/logo"
+                        android:layout_margin="20dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:textColor="#666666"
+                        android:textSize="12dp"
+                        android:text="@string/profile_description"
+                        android:layout_margin="14dp"
+                        android:justificationMode="inter_word"/>
+
+                </LinearLayout>
+                <!--Bottom Layout End-->
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+        <!--Main Content End-->
+
+
+    </RelativeLayout>
+    <!--Main Context End-->
+
+
+
+</RelativeLayout>

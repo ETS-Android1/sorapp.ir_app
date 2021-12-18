@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ac_verify"
+    android:background="@android:color/white">
+
+    <!--Main Content Start-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ac_verify_main_content_layout">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/ac_log_in_top_margin_panel"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_below="@id/ac_log_in_top_margin_panel">
+
+            <!--Header Image Start-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/img_done_sign"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+            <!--Header Image End-->
+
+
+            <!--Line Start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="35dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Verify_Code_Sended_To_Your_Email"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="#222222"/>
+
+
+
+            </LinearLayout>
+            <!--Line End-->
+
+            <!-- User Data Input Start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/style_edit_text"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:hint="@string/Verfy_Code"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:id="@+id/ac_verify_code_edit_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="35dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done"
+                        android:padding="8dp"
+                        android:textSize="18dp"
+                        android:background="@drawable/style_sign_in_button"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:elevation="5dp"
+                        android:textColor="@android:color/white"
+                        android:onClick="ac_verify_on_click_verify_button"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- User Data Input End-->
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+    <!--Main Content End-->
+
+
+
+
+    <!--Waiting Layout Start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"
+        android:id="@+id/ac_verify_waiting_layout"
+        android:visibility="gone">
+
+
+        <ProgressBar
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+    <!--Waiting Layout End-->
+
+
+
+
+
+</RelativeLayout>

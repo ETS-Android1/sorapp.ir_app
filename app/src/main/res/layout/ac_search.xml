@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ac_search"
+    android:background="@android:color/white">
+
+
+
+    <!--Main Content Start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/ac_search_main_content">
+
+        <!--Header Start-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:collapsedTitleGravity="top"
+            app:layout_anchorGravity="top"
+            app:layout_insetEdge="top"
+            android:background="@android:color/white"
+            android:elevation="5dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo"
+                    android:layout_margin="12dp"/>
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <!--Header End-->
+
+        <!--Search List Start-->
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:numColumns="3"
+            android:id="@+id/ac_search_gridview"/>
+        <!--Search List End-->
+
+
+    </RelativeLayout>
+    <!--Main Content End-->
+
+
+
+    <!--Wait Layout Start-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ac_search_wait"
+        android:layout_centerInParent="true">
+
+        <include layout="@layout/layout_loading"/>
+
+    </RelativeLayout>
+    <!--Wait Layout End-->
+
+
+
+    <!--404 Layout Start-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ac_search_not_found"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/ac_search_not_found_Icon"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_not_found_two"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ac_search_not_found_Icon"
+            android:textAlignment="center"
+            android:text="@string/Not_Founded_Item"
+            android:textSize="16dp"
+            android:layout_margin="25dp"/>
+
+    </RelativeLayout>
+    <!--404 Layout End-->
+
+
+
+
+</RelativeLayout>

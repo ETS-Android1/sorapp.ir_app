@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ir.soapp.turk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ac_search"></activity>
+        <activity android:name=".ac_posts_of_a_category" />
+        <activity android:name=".ac_post" />
+        <activity android:name=".ac_server_is_fixing" />
+        <activity android:name=".ac_limit_of_server" />
+        <activity android:name=".ac_limit_user" />
+        <activity android:name=".ac_notfound_user" />
+        <activity android:name=".ac_not_regestered" />
+        <activity android:name=".ac_verify" />
+        <activity android:name=".ac_no_internet" />
+        <activity android:name=".ac_login" />
+        <activity android:name=".ac_sign_in" />
+        <activity android:name=".ac_most_update" />
+        <activity
+            android:name=".ac_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ac_logo"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
